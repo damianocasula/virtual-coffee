@@ -1,4 +1,6 @@
 # virtual-coffee
+Brew a virtual coffee with your colleagues in you coffee break.
+**Demo:** https://virtualcoffee.rocks
 
 ## Credits
 
