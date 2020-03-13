@@ -10,59 +10,7 @@
       integrity="sha256-D9M5yrVDqFlla7nlELDaYZIpXfFWDytQtiV+TaH6F1I="
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background-color: rgb(240, 240, 240);
-      }
-
-      .page {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 0;
-      }
-
-      .confetti,
-      .github-ribbon-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-
-      .brewing-space {
-        padding: 1.5rem;
-        background-color: white;
-        z-index: 2;
-      }
-
-      .image-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      #coffee-break-image {
-        max-width: 400px;
-        padding-bottom: 1.5rem;
-      }
-
-      .footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        bottom: 0;
-        padding: .45rem;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        box-shadow: 0 .5em 1em -.125em rgba(20, 20, 20, .09),0 0 0 1px rgba(20, 20, 20, .02);
-        z-index: 2;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <noscript>You should have Javascript enabled to use this website</noscript>
@@ -132,7 +80,7 @@
       </div>
 
       <footer class="footer">
-        Created with <span style="font-size: 125%; padding: 0 3px">☕</span> by <a style="padding: 0 0 0 3px" href="https://casula.me">Damiano Casula</a>
+        <p>Created with <span class="emoji">☕</span> by <a href="https://casula.me">Damiano Casula</a></p>
       </footer class="footer">
     </div>
 
