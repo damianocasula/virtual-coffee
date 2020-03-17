@@ -1,3 +1,0 @@
-0.0.4
-- create vue project
-- use Buefy (Bulma as Vue components)
