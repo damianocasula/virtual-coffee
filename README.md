@@ -1,9 +1,24 @@
-# virtual-coffee
-Brew a virtual coffee with your colleagues in you coffee break.
-**Demo:** https://virtualcoffee.rocks
+# virtual-coffee-rocks
 
-## Credits
+## Project setup
+```
+npm install
+```
 
-- [Icons8](https://icons8.com/) for the [Ouch](https://icons8.com/ouch) illustration pack.
-- [VueJS](https://github.com/vuejs/vue) dev team for their awesome project.
-- [Bulma](https://github.com/jgthms/bulma) dev team for the coolest CSS framework.
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
