@@ -12,37 +12,51 @@
     <h2 class="subtitle">Brew a virtual coffee for yourself</h2>
 
     <form action>
-      <div class="field">
-        <label class="label" for="select-coffee-type">Select coffee type</label>
-        <div class="select">
-          <select name="coffeeType" id="select-coffee-type">
-            <option value="espresso">Espresso</option>
-            <option value="corto">Corto</option>
-            <option value="lungo">Lungo</option>
-            <option value="macchiato">Macchiato</option>
-          </select>
+      <label class="label" for="select-coffee-type">Select coffee type</label>
+      <div class="fields">
+        <div class="field">
+          <div class="select">
+            <select name="coffeeType" id="select-coffee-type">
+              <option value="espresso">Espresso</option>
+              <option value="corto">Corto</option>
+              <option value="lungo">Lungo</option>
+              <option value="macchiato">Macchiato</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <button
+            class="button is-dark disabled"
+            type="submit"
+            :disabled="brewing"
+            @click.prevent="brew()"
+            v-if="!brewing && !done"
+          >
+            <span>Brew your coffee</span>
+          </button>
+          <button v-if="brewing && !done" class="button is-dark disabled">
+            <span>Brewing...</span>
+          </button>
+          <button v-if="done" class="button is-green is-done is-success disabled">
+            <span>Brewed!</span>
+          </button>
         </div>
       </div>
-      <button
-        class="button is-dark disabled"
-        type="submit"
-        :disabled="brewing"
-        @click.prevent="brew()"
-        v-if="!brewing && !done"
-      >
-        <span>Brew your coffee</span>
-      </button>
-      <button v-if="brewing && !done" class="button is-dark disabled">
-        <span>Brewing...</span>
-      </button>
-      <button v-if="done" class="button is-green is-done is-success disabled">
-        <span>Brewed!</span>
-      </button>
     </form>
+
+    <div class="counting-wrapper">
+      <p>
+        You brewed
+        <span class="count">{{count}}</span> coffees since you opened this website for the first time.
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
+import store from '@/store'
+import { mapGetters } from 'vuex'
+
 function sleep (ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
@@ -58,6 +72,9 @@ export default {
   props: {
     heading: String
   },
+  computed: {
+    ...mapGetters(['count'])
+  },
   methods: {
     async brew () {
       // eslint-disable-next-line no-undef
@@ -67,11 +84,14 @@ export default {
         clock: 35
       })
       this.brewing = true
-      // eslint-disable-next-line no-undef
+
       await sleep(4500)
       this.done = true
+
+      store.commit('increment')
+
       confetti.render()
-      // eslint-disable-next-line no-undef
+
       await sleep(2500)
       this.done = false
       confetti.clear()
@@ -87,6 +107,7 @@ export default {
   padding: 1.5rem;
   background-color: white;
   z-index: 2;
+  width: 23vw;
 }
 
 .brewing-space .image-container {
@@ -97,7 +118,27 @@ export default {
 }
 
 .brewing-space #coffee-break-image {
-  max-width: 400px;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.brewing-space .counting-wrapper {
+  margin-top: 1.25rem;
+}
+
+.brewing-space .fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.brewing-space .button,
+.brewing-space .select,
+.brewing-space select {
+  width: 100%;
+}
+
+.brewing-space .count {
+  font-size: 105%;
+  font-weight: bold;
 }
 </style>
