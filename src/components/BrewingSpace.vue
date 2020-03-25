@@ -21,6 +21,7 @@
               <option value="corto">Corto</option>
               <option value="lungo">Lungo</option>
               <option value="macchiato">Macchiato</option>
+              <option value="macchiato">Tea</option>
             </select>
           </div>
         </div>
