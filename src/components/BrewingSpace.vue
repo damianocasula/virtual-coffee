@@ -108,7 +108,7 @@ export default {
   padding: 1.5rem;
   background-color: white;
   z-index: 2;
-  width: 23vw;
+  width: 25vw;
 }
 
 .brewing-space .image-container {
