@@ -48,7 +48,7 @@
     <div class="counting-wrapper">
       <p>
         You brewed
-        <span class="count">{{count}}</span> coffees since you opened this website for the first time.
+        <span class="count">{{count}}</span> coffees (and teas, for you tea lovers) since you opened this website for the first time.
       </p>
     </div>
   </div>
