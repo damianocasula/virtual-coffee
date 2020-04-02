@@ -142,4 +142,47 @@ export default {
   font-size: 105%;
   font-weight: bold;
 }
+
+@media screen and (max-width: 1400px) {
+  .brewing-space {
+    padding: 1rem;
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .brewing-space {
+    padding: 1rem;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .brewing-space {
+    padding: 1rem;
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .brewing-space {
+    padding: 1rem;
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .brewing-space {
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 0 !important;
+  }
+
+  .panel {
+    width: 100vw;
+    height: 100vh;
+    box-shadow: none;
+  }
+}
 </style>
