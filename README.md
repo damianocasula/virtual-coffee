@@ -10,5 +10,6 @@
 
 ### Project setup
 
-1. `npm install`
-2. `npm run dev`
+1. Install dependencies: `npm install`
+2. Live development server: `npm run serve`
+3. Build for production: `npm run build`
