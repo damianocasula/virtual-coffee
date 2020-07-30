@@ -1,24 +1,14 @@
-# virtual-coffee-rocks
+<h2 align="center">Virtual Coffee</h2>
 
-## Project setup
-```
-npm install
-```
+## Todos
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- [ ] Coffee brewing animation
+- [ ] Accounts
+- [ ] Video calls
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Development instructions
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Project setup
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. `npm install`
+2. `npm run dev`
